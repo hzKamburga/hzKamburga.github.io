@@ -1,154 +1,204 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChimeraAI - Yakında</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChimeraAI - Yapay Zeka Gücünü Keşfedin</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-        }
+  <!-- SEO -->
+  <meta name="description" content="ChimeraAI ile yapay zekanın gücünü keşfedin. Güçlü, hızlı ve güvenilir çözümler yakında sizlerle.">
+  <meta name="keywords" content="ChimeraAI, yapay zeka, AI hizmeti, yapay zeka çözümleri, AI platformu, teknoloji, yapay zeka Türkiye">
+  <meta name="author" content="ChimeraAI">
+  <meta name="robots" content="index, follow">
 
-        .logo {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 900;
-            margin-bottom: 2rem;
-            background: linear-gradient(135deg, #4A90E2, #74C0FC, #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: glow 3s ease-in-out infinite alternate;
-        }
+  <!-- Open Graph -->
+  <meta property="og:title" content="ChimeraAI - Yapay Zeka Gücünü Keşfedin">
+  <meta property="og:description" content="ChimeraAI ile yapay zekanın geleceğini deneyimleyin. Güçlü, hızlı ve güvenilir çözümler yakında sizlerle.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hzkamburga.github.io/">
+  <meta property="og:image" content="https://hzkamburga.github.io/assets/og-image.jpg">
 
-        .subtitle {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            margin-bottom: 3rem;
-            opacity: 0.8;
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ChimeraAI - Yapay Zeka Gücünü Keşfedin">
+  <meta name="twitter:description" content="ChimeraAI ile yapay zekanın geleceğini deneyimleyin. Güçlü, hızlı ve güvenilir çözümler yakında sizlerle.">
+  <meta name="twitter:image" content="https://hzkamburga.github.io/assets/og-image.jpg">
 
-        .icon {
-            font-size: 5rem;
-            margin: 2rem 0;
-            animation: float 3s ease-in-out infinite;
-        }
+  <!-- Canonical -->
+  <link rel="canonical" href="https://hzkamburga.github.io/">
 
-        @keyframes glow {
-            0% { filter: drop-shadow(0 0 20px rgba(74, 144, 226, 0.5)); }
-            100% { filter: drop-shadow(0 0 40px rgba(74, 144, 226, 0.8)); }
-        }
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
 
-        .footer {
-            position: absolute;
-            bottom: 2rem;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
-        }
+      body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+          color: white;
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          overflow: hidden;
+      }
 
-        /* Particle background */
-        .particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
-        }
+      .logo {
+          font-size: clamp(3rem, 8vw, 6rem);
+          font-weight: 900;
+          margin-bottom: 2rem;
+          background: linear-gradient(135deg, #4A90E2, #74C0FC, #ffffff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: glow 3s ease-in-out infinite alternate;
+          cursor: pointer;
+      }
 
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(74, 144, 226, 0.6);
-            border-radius: 50%;
-            animation: particleMove 8s linear infinite;
-        }
+      .subtitle {
+          font-size: clamp(1.5rem, 4vw, 2.5rem);
+          margin-bottom: 3rem;
+          opacity: 0.8;
+          font-weight: 300;
+          letter-spacing: 2px;
+      }
 
-        @keyframes particleMove {
-            0% {
-                transform: translateY(100vh) translateX(0);
-                opacity: 0;
-            }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% {
-                transform: translateY(-100px) translateX(50px);
-                opacity: 0;
-            }
-        }
+      .icon {
+          font-size: 5rem;
+          margin: 2rem 0;
+          animation: float 3s ease-in-out infinite;
+      }
 
-        @media (max-width: 768px) {
-            .logo {
-                margin-bottom: 1rem;
-            }
-            
-            .subtitle {
-                margin-bottom: 2rem;
-            }
-            
-            .icon {
-                font-size: 4rem;
-                margin: 1rem 0;
-            }
-        }
-    </style>
+      @keyframes glow {
+          0% { filter: drop-shadow(0 0 20px rgba(74, 144, 226, 0.5)); }
+          100% { filter: drop-shadow(0 0 40px rgba(74, 144, 226, 0.8)); }
+      }
+
+      @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+      }
+
+      .footer {
+          position: absolute;
+          bottom: 2rem;
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 0.9rem;
+      }
+
+      /* Particle background */
+      .particles {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          z-index: -1;
+      }
+
+      .particle {
+          position: absolute;
+          width: 2px;
+          height: 2px;
+          background: rgba(74, 144, 226, 0.6);
+          border-radius: 50%;
+          animation: particleMove 8s linear infinite;
+      }
+
+      @keyframes particleMove {
+          0% {
+              transform: translateY(100vh) translateX(0);
+              opacity: 0;
+          }
+          10% { opacity: 1; }
+          90% { opacity: 1; }
+          100% {
+              transform: translateY(-100px) translateX(50px);
+              opacity: 0;
+          }
+      }
+
+      /* Discord butonu */
+      .discord-btn {
+          display: inline-block;
+          margin-top: 2rem;
+          padding: 12px 24px;
+          background: linear-gradient(135deg, #5865F2, #4A55E2);
+          color: white;
+          font-weight: 600;
+          text-decoration: none;
+          border-radius: 8px;
+          box-shadow: 0 0 15px rgba(88,101,242,0.6);
+          transition: all 0.3s ease;
+      }
+
+      .discord-btn:hover {
+          background: linear-gradient(135deg, #4A55E2, #5865F2);
+          box-shadow: 0 0 25px rgba(88,101,242,1);
+          transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+          .logo {
+              margin-bottom: 1rem;
+          }
+          .subtitle {
+              margin-bottom: 2rem;
+          }
+          .icon {
+              font-size: 4rem;
+              margin: 1rem 0;
+          }
+      }
+  </style>
 </head>
 <body>
-    <div class="particles"></div>
-    
-    <div class="logo">ChimeraAI</div>
-    <div class="subtitle">YAKINDA</div>
-    <video src="https://opal.withgoogle.com/board/blobs/bc8ce181-3609-4b2d-99c0-70e84c2869b0" controls>
-  Your browser does not support the video tag.
-</video>
-    
-    <div class="footer">
-        © 2025 ChimeraAI | Tüm hakları saklıdır.
-    </div>
+  <div class="particles"></div>
 
-    <script>
-        // Create floating particles
-        function createParticles() {
-            const particles = document.querySelector('.particles');
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 8 + 's';
-                particle.style.animationDuration = (Math.random() * 3 + 5) + 's';
-                particles.appendChild(particle);
-            }
-        }
+  <div class="logo">ChimeraAI</div>
+  <div class="subtitle">YAKINDA</div>
 
-        createParticles();
+  <video src="https://opal.withgoogle.com/board/blobs/bc8ce181-3609-4b2d-99c0-70e84c2869b0" controls>
+    Tarayıcınız video etiketini desteklemiyor.
+  </video>
 
-        // Click effect on logo
-        document.querySelector('.logo').addEventListener('click', function() {
-            this.style.transform = 'scale(1.1)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 200);
-        });
-    </script>
+  <!-- Discord Butonu -->
+  <a class="discord-btn" href="https://discord.gg/T4yhCTpN" target="_blank" rel="noopener noreferrer">
+      Discord Topluluğumuza Katıl
+  </a>
+
+  <div class="footer">
+      © 2025 ChimeraAI | Tüm hakları saklıdır.
+  </div>
+
+  <script>
+      // Create floating particles
+      function createParticles() {
+          const particles = document.querySelector('.particles');
+          for (let i = 0; i < 50; i++) {
+              const particle = document.createElement('div');
+              particle.className = 'particle';
+              particle.style.left = Math.random() * 100 + '%';
+              particle.style.animationDelay = Math.random() * 8 + 's';
+              particle.style.animationDuration = (Math.random() * 3 + 5) + 's';
+              particles.appendChild(particle);
+          }
+      }
+      createParticles();
+
+      // Click effect on logo
+      document.querySelector('.logo').addEventListener('click', function() {
+          this.style.transform = 'scale(1.1)';
+          setTimeout(() => {
+              this.style.transform = 'scale(1)';
+          }, 200);
+      });
+  </script>
 </body>
 </html>
